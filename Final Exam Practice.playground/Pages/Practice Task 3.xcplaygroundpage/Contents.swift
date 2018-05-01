@@ -23,14 +23,54 @@ import PlaygroundSupport
  Or, if you wish, you may use the color constants created below.
  */
 
-// Create a new canvas
 let canvas = Canvas(width: 400, height: 600)
+canvas.fillColor = Color(hue: 84, saturation: 6, brightness: 88, alpha: 100)
+canvas.drawRectangle(centreX: 200, centreY: 300, width: 400, height: 600)
+
 
 // COLORS
 let lightGrey = Color(hue: 84, saturation: 6, brightness: 88, alpha: 100)
 let deepRed = Color(hue: 7, saturation: 97, brightness: 72, alpha: 100)
 
-// Begin your solution here... 
+//Draw text
+let kerningDefault : Float = -0.4
+canvas.textColor = Color(hue: 7, saturation: 97, brightness: 72, alpha: 100)
+canvas.drawText(message: "straight music presents", size: 10, x: 15, y: 555, kerning: kerningDefault)
+canvas.drawText(message: "the undertones", size: 10, x: 15, y: 545, kerning: kerningDefault)
+canvas.drawText(message: "with special guests", size: 10, x: 15, y: 525, kerning: kerningDefault)
+canvas.drawText(message: "the chords", size: 10, x: 15, y: 515, kerning: kerningDefault)
+
+canvas.drawText(message: "victoria hall hanley", size: 10, x: 150, y: 555, kerning: kerningDefault)
+canvas.drawText(message: "stoke-on-trent, england", size: 10, x: 150, y: 545, kerning: kerningDefault)
+canvas.drawText(message: "tuesday", size: 10, x: 150, y: 525, kerning: kerningDefault)
+canvas.drawText(message: "june 5 1979/7:30 pm", size: 10, x: 150, y: 515, kerning: kerningDefault)
+canvas.drawText(message: "advance tickets: £2.00", size: 10, x: 285, y: 555, kerning: kerningDefault)
+canvas.drawText(message: "at the door: £2.50", size: 10, x: 285, y: 545, kerning: kerningDefault)
+
+//Shift orgin
+canvas.translate(byX: 25, byY: 380)
+
+//canvas.drawAxes
+canvas.drawAxes()
+
+
+// Draw undertones
+canvas.textColor = Color.black
+
+canvas.drawText(message: "undertones", size: 65, x: 0, y: -37, kerning: 0)
+canvas.rotate(by: 4.7)
+
+//Loop 19 times
+for i in 1...19 {
+    //Rotate
+    canvas.rotate(by: -5)
+    
+    //dRAW TEXT
+    canvas.drawText(message: "undertones", size: 65, x: 0, y: -37, kerning: 0)
+    
+    //Fade
+    
+}
 
 /*:
  **Remember to commit and push your work,please**.
